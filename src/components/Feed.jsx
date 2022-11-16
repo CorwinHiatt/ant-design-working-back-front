@@ -20,7 +20,7 @@ export default function Feed() {
     ?<p>loading....</p>
   :<p>{photoList.length}</p>
   }
-  { showUpload ? <UploadModal setPhotoList={setPhotoList} setShowUpload={setShowUpLoad}/> : null}
+  { showUpload ? <UploadModal setPhotoList={setPhotoList} setShowUpLoad={setShowUpLoad}/> : null}
   <Button onClick={() => setShowUpLoad(true)}
   className="fab" 
   type="primary"
