@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# This is the front end 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+back end uses firestore database & picture storage.
 
 ## Available Scripts
 
