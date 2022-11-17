@@ -1,6 +1,7 @@
 # This is the front end 
 
 back end uses firestore database & picture storage.
+this is my version of Instagram
 
 ## Available Scripts
 
