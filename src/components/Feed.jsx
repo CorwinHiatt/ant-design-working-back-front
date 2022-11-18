@@ -4,6 +4,7 @@ import UploadModal from "./UploadModal"
 import Post from "./Post"
 
 
+
 export default function Feed() {
   const [photoList, setPhotoList] = useState()
   const [showUpload, setShowUpLoad] = useState(false)
@@ -14,13 +15,12 @@ export default function Feed() {
     .then(data => setPhotoList(data))
     .catch(alert)
   },[setPhotoList])
-  return(
-    
+  return(<>
     <section className="photo-feed">
     {!photoList
     ?<p>loading....</p>
   : photoList.map(post => (
-    <Post post={post} key={post.photoId} />
+    <Post post={post} setPhotoList={setPhotoList} key={post.photoId} />
    ))
   }
   { showUpload ? <UploadModal setPhotoList={setPhotoList} setShowUpLoad={setShowUpLoad}/> : null}
@@ -30,7 +30,7 @@ export default function Feed() {
   shape="circle" 
   size="large">+</Button>
     </section>
-    
+    </>
 
   )
 }

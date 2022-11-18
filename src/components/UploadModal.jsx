@@ -1,6 +1,7 @@
 import {initializeApp} from "firebase/app"
 import { getStorage, ref, uploadBytes } from "firebase/storage"
 import { Modal, Form, Input, Button, Upload } from "antd"
+import Login from "./Login"
 
 const firebaseConfig = {
   apiKey: "AIzaSyCJbEIKuTmFw5sr_1JeVUU0klOR7vXlyY0",
@@ -46,7 +47,8 @@ export default function UploadModal({setShowUpLoad, setPhotoList}) {
  
   }
   const closeModal = () => setShowUpLoad(false)
-  return(
+  return(<>
+    
     <Modal title="upload photo" open={true} footer={null} onCancel={closeModal}>
       <Form labelCol={{span: 8}} wrapperCol={{span: 16}} onFinish={handleNewPhoto}>
         <Form.Item name="username" label="User Name" >
@@ -68,5 +70,6 @@ export default function UploadModal({setShowUpLoad, setPhotoList}) {
         </Form.Item>
       </Form>
     </Modal>
+    </>
   )
 }

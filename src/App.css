@@ -8,10 +8,19 @@ header{
   background-color: aliceblue;
   z-index: 1;
   color:rgb(3, 3, 3);
+  /* position: fixed; */
   padding: 1em;
-  position: fixed;
   width: 100vw;
   border-bottom: 4px solid rgb(232, 231, 228);
+}
+.like-button{
+ 
+  color: aliceblue;
+  background-color: rgba(12, 122, 240, 0.802);
+  border:solid 1px #f3ecf3;
+  margin-left: 41px;
+  border-radius: 60%;
+  box-shadow: 10px 10px 10px 10px;
 }
 
 .photo-feed{
